@@ -27,7 +27,7 @@ services:
       - spark-network
     depends_on:
       - spark-master
-    command: ["/bin/bash", "-c", "/opt/bitnami/spark/sbin/start-connect-server.sh --packages org.apache.spark:spark-connect_2.13:4.0.0"]
+    command: ["/bin/bash", "-c", "/opt/bitnami/spark/sbin/start-connect-server.sh --conf spark.master=spark://spark-master:7077 --packages org.apache.spark:spark-connect_2.13:4.0.0"]
     volumes:      
       - ./temp_data/logs:/opt/spark/logs
 
