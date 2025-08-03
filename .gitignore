@@ -1,0 +1,5 @@
+# Local Python venv
+.venv
+
+# Directory with local temp files
+temp_data
